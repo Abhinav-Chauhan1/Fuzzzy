@@ -16,15 +16,15 @@ const Inbox = () => {
   return (
     <>
       {!selectedConversation ? (
-        <div className="w-5/12 max-xl:w-3/6 max-lg:w-3/5 max-sm:w-full mx-auto overflow-hidden bg-[#20232C]">
-          <div className="mt-4  h-screen">
+        <div className="w-5/12  max-lg:w-3/5  overflow-hidden bg-[#20232C] rounded-r-3xl">
+          <div className="mt-4 mr-4 h-screen">
             <div className="flex-grow px-8 pt-8 text-left flex-col flex justify-end text-white bg-[#1B1E25] min-h-full pb-28 rounded-t-2xl"></div>
           </div>
         </div>
       ) : (
-        <div className="w-5/12 max-xl:w-3/6 max-lg:w-3/5 max-sm:w-full h-screen mx-auto bg-[#20232C]">
-          <div className="mt-4 h-screen">
-            <div className="sticky top-0  rounded-t-2xl bg-[#000000] py-5 px-8 text-left text-sm  text-white">
+        <div className="w-5/12 max-lg:w-3/5  h-screen bg-[#20232C] rounded-r-2xl">
+          <div className="mt-4 mr-4 h-screen">
+            <div className="sticky top-0 flex rounded-t-2xl bg-[#000000] h-16 items-center px-8 text-left text-sm  text-white">
               <img
                 src={userProfile}
                 alt=""

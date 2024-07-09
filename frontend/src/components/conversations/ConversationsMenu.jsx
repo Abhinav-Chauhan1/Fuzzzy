@@ -6,11 +6,8 @@ import SearchBox from './SearchBox'
 
 const secondleftmenu = () => {
   return (
-    <div className="w-1/4 max-lg:w-2/5 hidden sm:block h-full mx-auto bg-[#20232C]">
+    <div className="w-1/4 max-lg:w-2/5  h-full bg-[#20232C] rounded-l-3xl">
       <SearchBox />
-      <Accordion title="Unread">
-         {/* Chats */}
-      </Accordion>
       <Accordion title="All Messages">
          {/* Chats  */}
         <Conversations />

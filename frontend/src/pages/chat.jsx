@@ -6,11 +6,11 @@ import RightSidemenu from "../components/RightSidemenu"
 
 const chat = () => {
   return (
-    <div className='flex h-screen'>
-      <LeftSidemenu />
+    <div className='flex justify-center h-screen'>
+      {/* <LeftSidemenu /> */}
       <Profilemenu />
       <Inbox />
-      <RightSidemenu />
+      {/* <RightSidemenu /> */}
     </div>
   )
 }

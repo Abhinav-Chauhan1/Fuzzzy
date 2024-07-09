@@ -16,7 +16,7 @@ const Message = ( { message } ) => {
     
   return (
     <>
-      <div className={`chat ${chatClassName} mb-2`} >
+      <div className={`chat ${chatClassName}`} >
       <div className={`chat-image ${profilePic} avatar`}>
 				<div className='w-10 rounded-full'>
 					<img alt='Tailwind CSS chat bubble component' src={ProfilePic} />

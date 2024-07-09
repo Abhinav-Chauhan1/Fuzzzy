@@ -22,7 +22,7 @@ const MessageInput = () => {
         type="text"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        placeholder="Hello"
+        placeholder="Write Message"
         className="peer ml-4 flex-grow bg-transparent text-white outline-none"
       />
       <button
