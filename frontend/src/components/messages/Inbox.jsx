@@ -15,14 +15,14 @@ const Inbox = () => {
   return (
     <>
       {!selectedConversation ? (
-        <div className="w-5/12  max-lg:w-3/5  overflow-hidden bg-[#20232C] rounded-r-3xl">
+        <div className="w-5/12  max-lg:w-3/5  overflow-hidden bg-primary rounded-r-3xl">
           <div className="mt-4 mr-4 h-screen">
-            <div className="flex-grow px-8 pt-8 text-left flex-col flex justify-end text-white bg-[#1B1E25] min-h-full pb-28 rounded-t-2xl"></div>
+            <div className="flex-grow px-8 pt-8 text-left flex-col flex justify-end text-white bg-secondary h-[85%] pb-28 rounded-2xl"></div>
           </div>
         </div>
       ) : (
-        <div className="w-5/12 max-lg:w-3/5  h-screen bg-[#20232C] rounded-r-2xl">
-          <div className="mt-4 mr-4 h-screen">
+        <div className="w-5/12 max-lg:w-3/5  max-h-full bg-primary rounded-r-2xl">
+          <div className="mt-4 mr-4 max-h-full">
             <div className="sticky top-0 flex rounded-t-2xl bg-[#000000] h-16 items-center px-8 text-left text-sm  text-white">
               <img
                 src={selectedConversation?.profilePic}
@@ -33,13 +33,13 @@ const Inbox = () => {
                 {selectedConversation.fullName}
               </h4>
             </div>
-            <div className="flex-grow px-4  text-left flex-col flex justify-end text-white h-[84%] pb-2 bg-[#1B1E25]">
+            <div className="flex-grow px-4  text-left flex-col  h-[78vh] flex justify-end text-white pb-2 bg-accent rounded-b-2xl">
               <div className="overflow-y-auto">
-                <div className="relative text-center">
-                  <span className="relative px-2 text-sm">Yesterday</span>
-                </div>
                 <Messages />
               </div>
+                {/* <div className="relative text-center">
+                  <span className="relative px-2 text-sm">Yesterday</span>
+                </div> */}
               <MessageInput />
             </div>
           </div>

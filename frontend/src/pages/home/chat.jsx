@@ -4,7 +4,7 @@ import Inbox from "../../components/messages/Inbox"
 
 const chat = () => {
   return (
-    <div className='flex justify-center h-full'>
+    <div className='flex justify-center min-h-[80%]'>
       <Profilemenu />
       <Inbox />
     </div>

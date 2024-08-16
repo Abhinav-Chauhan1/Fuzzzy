@@ -12,8 +12,8 @@ const Conversation = ({ conversation, lastIdx }) => {
   return (
     <>
       <div
-        className={`rounded-2xl text-white hover:bg-[#1A1D24] p-2 mb-2 cursor-pointer
-            ${isSelected ? "bg-[#1A1D24]" : "hover:bg-[#1A1D24]"} 
+        className={`rounded-2xl text-white hover:bg-accent p-2 mb-2 cursor-pointer
+            ${isSelected ? "bg-accent" : "hover:bg-accent"} 
             `}
         onClick={() => setSelectedConversation(conversation)}
       >
@@ -23,11 +23,8 @@ const Conversation = ({ conversation, lastIdx }) => {
           </div>
           <div className="w-full">
             <div className="flex justify-between">
-              <p className="font-medium px-3">{conversation.fullName}</p>
+              <p className="font-medium text-info px-3">{conversation.fullName}</p>
             </div>
-            <p className="font-medium text-gray-400 text-xs px-3">
-              {conversation.username}
-            </p>
           </div>
         </div>
       </div>

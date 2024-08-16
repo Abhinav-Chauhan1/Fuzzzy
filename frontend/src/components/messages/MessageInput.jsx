@@ -16,14 +16,14 @@ const MessageInput = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-2xl flex min-h-14 items-center justify-start bg-[#16171C] leading-6"
+      className="rounded-2xl flex min-h-14 mb-2 bottom-0 items-center justify-start bg-secondary leading-6"
     >
       <input
         type="text"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Write Message"
-        className="peer ml-4 flex-grow bg-transparent text-white outline-none"
+        className="peer ml-4 flex-grow bg-transparent text-info outline-none placeholder-info"
       />
       <button
         type="submit"

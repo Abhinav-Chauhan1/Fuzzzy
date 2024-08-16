@@ -28,12 +28,9 @@ const SignUp = () => {
 		<div className="min-w-full h-screen flex justify-center items-center">
         <div className="absolute w-[80%] h-[80%] flex">
           {/* Section1 */}
-          <div className="relative min-h-[100%] md:w-[65%] mx-auto md:block hidden">
-            <img className="rounded-l-3xl h-full" src={bgImg}  alt="bg"  />
-          </div>
 
           {/* Section2 */}
-          <div data-theme="light" className="relative md:w-[35%] m-auto  h-full max-md:p-10 bg-white max-md:rounded-3xl rounded-r-3xl
+          <div data-theme="light" className="relative md:w-[35%] m-auto  h-full max-md:p-10 bg-white max-md:rounded-3xl rounded-3xl
           flex justify-center max-md:overflow-auto">
             {/* Form */}
               <form className="flex flex-col my-auto pt-3 md:pt-8" onSubmit={handleSubmit}>

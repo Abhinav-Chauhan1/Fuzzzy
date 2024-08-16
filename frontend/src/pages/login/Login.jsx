@@ -20,7 +20,7 @@ const Login = () => {
         {/* Section1 */}
         <div
           data-theme="light"
-          className="relative md:w-[35%] m-auto  h-full max-md:p-10 bg-white max-md:rounded-3xl rounded-l-3xl
+          className="relative md:w-[35%] m-auto  h-full max-md:p-10 bg-white max-md:rounded-3xl rounded-3xl
           flex justify-center max-md:overflow-auto"
         >
           {/* Form */}
@@ -78,17 +78,7 @@ const Login = () => {
                 or
               </div>
             </div>
-            <button
-              //   onClick={""}
-              className="-2 mt-8 flex items-center justify-center rounded-md border px-4 py-1 outline-none ring-gray-400 ring-offset-2 transition focus:ring-2 hover:border-transparent hover:bg-black hover:text-white"
-            >
-              <img
-                className="mr-2 h-5"
-                src="https://static.cdnlogo.com/logos/g/35/google-icon.svg"
-              />{" "}
-              Log in with Google
-            </button>
-            <div className="py-12 text-center">
+            <div className="py-8 text-center">
               <p className="whitespace-nowrap text-gray-600">
                 Don't have an account?
               </p>
@@ -102,15 +92,6 @@ const Login = () => {
               </div>
             </div>
           </form>
-        </div>
-
-        {/* Section2 */}
-        <div className="relative min-h-[100%] md:w-[65%] mx-auto md:block hidden">
-          <div className="absolute  from-neutral-50 z-10 bottom-56 right-20">
-            <div className="text-7xl">FUZZZY</div>
-            <div className="text-3xl text-right mr-4">All You Need</div>
-          </div>
-          <img className="rounded-r-3xl h-full" src={bgImg} alt="bg" />
         </div>
       </div>
     </div>

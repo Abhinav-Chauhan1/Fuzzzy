@@ -1,22 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logout from "./Logout";
-import { Link } from "react-router-dom";
 import { useAuthContext } from '../../context/AuthContext';
 
 const NewNavbar = () => {
   const { authUser } = useAuthContext();
+  const [theme, setTheme] = useState("fussy");
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "fussy" ? "fussylight" : "fussy"));
+  };
 
   return (
-    <div className="navbar w-8/12 max-lg:w-full mb-1 bg-[#20232C] mx-auto rounded-b-3xl">
+    <div className="navbar w-8/12 max-lg:w-full mb-1 bg-primary mx-auto rounded-b-3xl">
       <div className="navbar-start">
 
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost text-xl">Fuzzzy</a>
+        <a className="btn btn-ghost text-xl text-white">Fusssy</a>
       </div>
       <div className="navbar-end gap-2 mr-2">
-        <button className="btn btn-ghost btn-circle">
-        <input type="checkbox" value="synthwave" className="toggle theme-controller"/>
+        <button onClick={toggleTheme} className="btn btn-ghost btn-circle">
+        <input type="checkbox" checked={theme === "fussylight"}  readOnly className='toggle  theme-controller'/>
         </button>
         <button className="btn btn-ghost btn-circle">
           <div className="indicator">
@@ -25,7 +34,7 @@ const NewNavbar = () => {
               className="h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
+              stroke="#ffffff"
             >
               <path
                 strokeLinecap="round"
@@ -52,17 +61,8 @@ const NewNavbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+            className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-primary text-info rounded-box w-52"
           >
-            <li>
-              <Link to={"/profile"} className="justify-between">
-                Profile
-                <span className="badge">New</span>
-              </Link>
-            </li>
-            <li>
-              <a>Settings</a>
-            </li>
             <li>
             <Logout />
             </li>
