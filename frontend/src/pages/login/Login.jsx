@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useLogin from "../../hooks/useLogin";
-import bgImg from "../../assets/images/bg.jpg";
+import bgImg from "../../assets/images/bg_white.jpg";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -15,7 +15,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-w-full h-screen flex justify-center items-center">
+    <div className="min-w-full h-screen flex justify-center items-center bg-[url('../src/assets/images/bg_white.jpg')]">
       <div className="absolute w-[80%] h-[80%] flex">
         {/* Section1 */}
         <div
